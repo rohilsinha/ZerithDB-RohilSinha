@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ClientLayout } from "./client-layout";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -28,8 +29,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ThemeToggle />
           {children}
-          <ToasterProvider />
-        </ThemeProvider>
+        </ClientLayout>
       </body>
     </html>
   );
