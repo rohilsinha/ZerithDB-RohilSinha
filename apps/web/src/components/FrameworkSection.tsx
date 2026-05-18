@@ -106,7 +106,7 @@ const frameworks = [
 
 export default function FrameworkSection() {
   return (
-    <div className="py-20 px-6 relative bg-transparent transition-colors duration-300">
+    <div className="py-20 px-6 relative bg-transparent theme-transition">
       {/* Background gradients */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-900/20 rounded-full blur-[120px]" />
@@ -160,7 +160,7 @@ export default function FrameworkSection() {
                   {fw.icon}
                 </div>
 
-                <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight transition-colors duration-300">
+                <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight theme-transition">
                   {fw.name}
                 </span>
               </motion.div>

@@ -51,27 +51,27 @@ function ClientPanel({
           IndexedDB
         </div>
       </motion.div>
-      <div className="flex-1 overflow-y-auto p-4 bg-gray-50 dark:bg-zinc-900 space-y-2 transition-colors duration-300">
+      <div className="flex-1 overflow-y-auto p-4 bg-gray-50 dark:bg-zinc-900 space-y-2 theme-transition">
         {isLoading ? (
           [1, 2].map((item) => (
             <div
               key={item}
-              className="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-gray-100 dark:border-zinc-700 animate-pulse transition-colors duration-300"
+              className="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-gray-100 dark:border-zinc-700 animate-pulse theme-transition"
             >
-              <motion.div className="h-3 bg-gray-200 dark:bg-zinc-600 rounded w-4/5 mb-2 transition-colors duration-300" />
-              <div className="h-2 bg-gray-100 dark:bg-zinc-700 rounded w-1/3 transition-colors duration-300" />
+              <motion.div className="h-3 bg-gray-200 dark:bg-zinc-600 rounded w-4/5 mb-2 theme-transition" />
+              <div className="h-2 bg-gray-100 dark:bg-zinc-700 rounded w-1/3 theme-transition" />
             </div>
           ))
         ) : notes.length === 0 ? (
-          <p className="text-center text-gray-400 dark:text-gray-500 text-sm mt-10 transition-colors duration-300">No documents yet.</p>
+          <p className="text-center text-gray-400 dark:text-gray-500 text-sm mt-10 theme-transition">No documents yet.</p>
         ) : (
           notes.map((note) => (
             <div
               key={note.id}
-              className="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-gray-100 dark:border-zinc-700 shadow-sm text-sm transition-colors duration-300"
+              className="bg-white dark:bg-zinc-800 p-3 rounded-lg border border-gray-100 dark:border-zinc-700 shadow-sm text-sm theme-transition"
             >
-              <p className="text-gray-800 dark:text-gray-100 transition-colors duration-300">{note.text}</p>
-              <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 font-mono uppercase transition-colors duration-300">
+              <p className="text-gray-800 dark:text-gray-100 theme-transition">{note.text}</p>
+              <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 font-mono uppercase theme-transition">
                 {note.id} • {new Date(note.timestamp).toLocaleTimeString()}
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function HomePlayground() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="mb-10 md:text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4 transition-colors duration-300">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4 theme-transition">
             <Zap className="w-3.5 h-3.5" />
             Live on the homepage
           </div>
@@ -239,7 +239,7 @@ export default function HomePlayground() {
                     ? "Connecting peers..."
                     : "Peers offline"}
               </div>
-              <div className="flex items-center gap-2 text-xs font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 px-3 py-1.5 rounded-full transition-colors duration-300">
+              <div className="flex items-center gap-2 text-xs font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-700 px-3 py-1.5 rounded-full theme-transition">
                 <ArrowRightLeft className="w-3.5 h-3.5" />
                 Sync ops: {syncCount}
               </div>
@@ -284,7 +284,7 @@ export default function HomePlayground() {
 
             <Link
               href="/playground"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 theme-transition"
             >
               Open full playground
               <ArrowRight className="w-4 h-4" />
